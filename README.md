@@ -1,9 +1,9 @@
 <p align="center">
     <img src="doc/demo/logo.png" width="80px" />
     <h1 align="center">Cloud Mail</h1>
-    <p align="center">基于 Cloudflare 的简约响应式邮箱服务，支持邮件发送、附件收发 🎉</p> 
+    <p align="center">基於 Cloudflare 的簡約響應式郵箱服務，支持郵件發送、附件收發 🎉</p> 
     <p align="center">
-        简体中文 | <a href="/README-en.md" style="margin-left: 5px">English </a>
+        傳統中文 | <a href="/README-en.md" style="margin-left: 5px">English </a>
     </p>
     <p align="center">
         <a href="https://github.com/maillab/cloud-mail/tree/main?tab=MIT-1-ov-file" target="_blank" >
@@ -30,14 +30,14 @@
 </p>
 
 
-## 项目简介
+## 項目簡介
 
-只需要一个域名，就可以创建多个不同的邮箱，类似各大邮箱平台，本项目支持署到 Cloudflare Workers ，降低服务器成本，搭建自己的邮箱服务
+衹需要一個域名，就可以創建多個不同的郵箱，類似各大郵箱平臺，本項目支持署到 Cloudflare Workers ，降低服務器成本，搭建自己的郵箱服務
 
-## 项目展示
+## 項目展示
 
-- [在线演示](https://skymail.ink)<br>
-- [部署文档](https://doc.skymail.ink)<br>
+- [在線演示](https://skymail.ink)<br>
+- [部署文檔](https://doc.skymail.ink)<br>
 
 | ![](/doc/demo/demo1.png) | ![](/doc/demo/demo2.png) |
 |-----------------------|-----------------------|
@@ -46,37 +46,37 @@
 
 
 
-## 功能介绍
+## 功能介紹
 
-- **💰 低成本使用**： 可部署到 Cloudflare Workers 降低服务器成本
+- **💰 低成本使用**： 可部署到 Cloudflare Workers 降低服務器成本
 
-- **💻 响应式设计**：响应式布局自动适配PC和大部分手机端浏览器
+- **💻 響應式設計**：響應式佈局自動適配PC和大部分手機端瀏覽器
 
-- **📧 邮件发送**：集成Resend发送邮件，支持群发，内嵌图片和附件发送，发送状态查看
+- **📧 郵件發送**：集成Resend發送郵件，支持羣發，內嵌圖片和附件發送，發送狀態查看
 
-- **🛡️ 管理员功能**：可以对用户，邮件进行管理，RABC权限控制对功能及使用资源限制
+- **🛡️ 管理員功能**：可以對用戶，郵件進行管理，RABC權限控制對功能及使用資源限制
 
-- **📦 附件收发**：支持收发附件，使用R2对象存储保存和下载文件
+- **📦 附件收發**：支持收發附件，使用R2對象存儲保存和下載文件
 
-- **🔔 邮件推送**：接收邮件后可以转发到TG机器人或其他服务商邮箱
+- **🔔 郵件推送**：接收郵件後可以轉發到TG機器人或其他服務商郵箱
 
-- **📡 开放API**：支持使用API批量生成用户，多条件查询邮件 
+- **📡 開放API**：支持使用API批量生成用戶，多條件查詢郵件 
 
-- **🔢 验证码识别**：使用Workers AI，自动识别邮件验证码 
+- **🔢 驗證碼識別**：使用Workers AI，自動識別郵件驗證碼 
 
-- **📈 数据可视化**：使用ECharts对系统数据详情，用户邮件增长可视化显示
+- **📈 數據可視化**：使用ECharts對系統數據詳情，用戶郵件增長可視化顯示
 
-- **🎨 个性化设置**：可以自定义网站标题，登录背景，透明度
+- **🎨 個性化設置**：可以自定義網站標題，登錄背景，透明度
 
-- **🤖 人机验证**：集成Turnstile人机验证，防止人机批量注册
+- **🤖 人機驗證**：集成Turnstile人機驗證，防止人機批量註冊
 
-- **📜 更多功能**：正在开发中...
+- **📜 更多功能**：正在開發中...
 
 
 
-## 技术栈
+## 技術棧
 
-- **平台**：[Cloudflare Workers](https://developers.cloudflare.com/workers/)
+- **平臺**：[Cloudflare Workers](https://developers.cloudflare.com/workers/)
 
 - **Web框架**：[Hono](https://hono.dev/)
 
@@ -86,68 +86,68 @@
 
 - **UI框架**：[Element Plus](https://element-plus.org/) 
 
-- **邮件推送：** [Resend](https://resend.com/)
+- **郵件推送：** [Resend](https://resend.com/)
 
-- **缓存**：[Cloudflare KV](https://developers.cloudflare.com/kv/)
+- **緩存**：[Cloudflare KV](https://developers.cloudflare.com/kv/)
 
-- **数据库**：[Cloudflare D1](https://developers.cloudflare.com/d1/)
+- **數據庫**：[Cloudflare D1](https://developers.cloudflare.com/d1/)
 
-- **文件存储**：[Cloudflare R2](https://developers.cloudflare.com/r2/)
+- **文件存儲**：[Cloudflare R2](https://developers.cloudflare.com/r2/)
 
-## 目录结构
+## 目錄結構
 
 ```
 cloud-mail
-├── mail-worker				    # worker后端项目
+├── mail-worker				    # worker後端項目
 │   ├── src                  
-│   │   ├── api	 			    # api接口层			
-│   │   ├── const  			    # 项目常量
-│   │   ├── dao                 # 数据访问层
-│   │   ├── email			    # 邮件处理接收
-│   │   ├── entity			    # 数据库实体
-│   │   ├── error			    # 自定义异常
-│   │   ├── hono			    # web框架配置、拦截器、全局异常等
-│   │   ├── i18n			    # 语言国际化
-│   │   ├── init			    # 数据库缓存初始化
-│   │   ├── model			    # 响应体数据封装
-│   │   ├── security			# 身份权限认证
-│   │   ├── service			    # 业务服务层
+│   │   ├── api	 			    # api接口層			
+│   │   ├── const  			    # 項目常量
+│   │   ├── dao                 # 數據訪問層
+│   │   ├── email			    # 郵件處理接收
+│   │   ├── entity			    # 數據庫實體
+│   │   ├── error			    # 自定義異常
+│   │   ├── hono			    # web框架配置、攔截器、全局異常等
+│   │   ├── i18n			    # 語言國際化
+│   │   ├── init			    # 數據庫緩存初始化
+│   │   ├── model			    # 響應體數據封裝
+│   │   ├── security			# 身份權限認證
+│   │   ├── service			    # 業務服務層
 │   │   ├── template			# 消息模板
-│   │   ├── utils			    # 工具类
+│   │   ├── utils			    # 工具類
 │   │   └── index.js			# 入口文件
-│   ├── pageckge.json			# 项目依赖
-│   └── wrangler.toml			# 项目配置
+│   ├── pageckge.json			# 項目依賴
+│   └── wrangler.toml			# 項目配置
 │
-├── mail-vue				    # vue前端项目
+├── mail-vue				    # vue前端項目
 │   ├── src
 │   │   ├── axios 			    # axios配置
-│   │   ├── components			# 自定义组件
-│   │   ├── echarts			    # echarts组件导入
-│   │   ├── i18n			    # 语言国际化
+│   │   ├── components			# 自定義組件
+│   │   ├── echarts			    # echarts組件導入
+│   │   ├── i18n			    # 語言國際化
 │   │   ├── init			    # 入站初始化
-│   │   ├── layout			    # 主体布局组件
-│   │   ├── perm			    # 权限认证
+│   │   ├── layout			    # 主體佈局組件
+│   │   ├── perm			    # 權限認證
 │   │   ├── request			    # api接口
 │   │   ├── router			    # 路由配置
-│   │   ├── store			    # 全局状态管理
-│   │   ├── utils			    # 工具类
-│   │   ├── views			    # 页面组件
-│   │   ├── app.vue			    # 入口组件
+│   │   ├── store			    # 全局狀態管理
+│   │   ├── utils			    # 工具類
+│   │   ├── views			    # 頁面組件
+│   │   ├── app.vue			    # 入口組件
 │   │   ├── main.js			    # 入口js
 │   │   └── style.css			# 全局css
-│   ├── package.json			# 项目依赖
-└── └── env.release				# 项目配置
+│   ├── package.json			# 項目依賴
+└── └── env.release				# 項目配置
 ```
 
-## 赞助
+## 贊助
 
 <a href="https://doc.skymail.ink/support.html" >
 <img width="170px" src="./doc/images/support.png" alt="">
 </a>
 
-## 许可证
+## 許可證
 
-本项目采用 [MIT](LICENSE) 许可证	
+本項目採用 [MIT](LICENSE) 許可證	
 
 
 ## 交流
